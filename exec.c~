@@ -14,8 +14,6 @@ int main(int argc,char * argy[]){
   printf("Enter the program name:\n");
   char a[50];
   fgets(a,sizeof(a),stdin);
-  char *s = a;
-  //execlp();
-  printf("%s\n", a);
+  printf("%s\n", a); 
   return 0;
 }
