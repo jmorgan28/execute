@@ -26,9 +26,9 @@ int main(int argc,char * argy[]){
   }
   commands[w] = 0;
   
-  printf("%s\n", commands[0]);
+  //printf("%s\n", commands[0]);
   //printf("%s\n", commands[1]);
   execvp(commands[0],commands);
-  printf("works");
+  //printf("works");
   return 0;
 }
