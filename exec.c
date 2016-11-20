@@ -25,19 +25,24 @@ int main(int argc,char * argy[]){
   }
   
   char * commands[k +2];
-  // char * commandss[k +1];
+  //char * commandss[k +1];
   int w = 0;
   while(w < k + 1){
     commands[w] = strsep(&s, " ");
     w ++;
   }
-  //w = 0;
-  //while(w < k){
-    //commandss[w] = commands[w + 1];
-    //w ++;
-    //}
+  w = 0;
+  while(commands[k][w] != '\n'){
+    w ++;
+  }
+  char *byen;
+  printf("%d\n", w);
+  printf("%s\n", commands[2]);
+  strncat(byen, commands[k], w); 
+  commands[k] = byen;  
   printf("%s\n", commands[0]);
   printf("%s\n", commands[1]);
+  printf("%s\n", commands[2]);
   printf("%d\n", k + 2);
   // printf("%s\n", commands[2]);
   //printf("%d\n", k);
