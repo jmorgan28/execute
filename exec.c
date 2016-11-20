@@ -25,20 +25,23 @@ int main(int argc,char * argy[]){
   }
   
   char * commands[k +2];
-  char * commandss[k +1];
+  // char * commandss[k +1];
   int w = 0;
   while(w < k + 1){
     commands[w] = strsep(&s, " ");
     w ++;
   }
-  w = 0;
-  while(w < k){
-    commandss[w] = commands[w + 1];
-    w ++;
-  }
-  //printf("%s\n", a);
+  //w = 0;
+  //while(w < k){
+    //commandss[w] = commands[w + 1];
+    //w ++;
+    //}
+  printf("%s\n", commands[0]);
+  printf("%s\n", commands[1]);
+  printf("%d\n", k + 2);
+  // printf("%s\n", commands[2]);
   //printf("%d\n", k);
-  execvp(commands[1],commandss);
+  execvp(commands[0],commands);
   printf("working");
   return 0;
 }
