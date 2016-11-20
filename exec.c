@@ -32,14 +32,19 @@ int main(int argc,char * argy[]){
     w ++;
   }
   w = 0;
-  while(commands[k][w] != '\n'){
+  while(commands[k][w]){
     w ++;
   }
-  char *byen;
-  printf("%d\n", w);
-  printf("%s\n", commands[2]);
-  strncat(byen, commands[k], w); 
-  commands[k] = byen;  
+  char bet[w];
+  w = 0;
+  while(commands[k][w] != '\n'){
+    bet[w] = commands[k][w];
+    w ++;
+  }
+  //printf("%d\n", w);
+  //printf("%s\n", commands[2]);
+  //strncat(byen, commands[k], w); 
+  commands[k] = bet;  
   printf("%s\n", commands[0]);
   printf("%s\n", commands[1]);
   printf("%s\n", commands[2]);
