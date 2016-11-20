@@ -11,11 +11,34 @@
 #include <unistd.h>
 
 int main(int argc,char * argy[]){
-  printf("Enter the program name:\n");
-  char a[50];
+  printf("What would you like to do?:\n");
+  char a[250];
   fgets(a,sizeof(a),stdin);
   char *s = a;
-  //execlp();
-  printf("%s\n", a);
+  int i = 0;
+  int k = 0;
+  while(s[i]){
+    i ++;
+    if(s[i] == ' '){
+      k ++;
+    }
+  }
+  
+  char * commands[k +2];
+  char * commandss[k +1];
+  int w = 0;
+  while(w < k + 1){
+    commands[w] = strsep(&s, " ");
+    w ++;
+  }
+  w = 0;
+  while(w < k){
+    commandss[w] = commands[w + 1];
+    w ++;
+  }
+  //printf("%s\n", a);
+  //printf("%d\n", k);
+  execvp(commands[1],commandss);
+  printf("working");
   return 0;
 }
