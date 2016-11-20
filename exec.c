@@ -25,7 +25,6 @@ int main(int argc,char * argy[]){
   }
   
   char * commands[k +2];
-  //char * commandss[k +1];
   int w = 0;
   while(w < k + 1){
     commands[w] = strsep(&s, " ");
@@ -41,17 +40,10 @@ int main(int argc,char * argy[]){
     bet[w] = commands[k][w];
     w ++;
   }
-  //printf("%d\n", w);
-  //printf("%s\n", commands[2]);
-  //strncat(byen, commands[k], w); 
-  commands[k] = bet;  
+  commands[k] = bet;
   printf("%s\n", commands[0]);
-  printf("%s\n", commands[1]);
-  printf("%s\n", commands[2]);
-  printf("%d\n", k + 2);
-  // printf("%s\n", commands[2]);
-  //printf("%d\n", k);
+  //printf("%s\n", commands[1]);
   execvp(commands[0],commands);
-  printf("working");
+  printf("work");
   return 0;
 }
